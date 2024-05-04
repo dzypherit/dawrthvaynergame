@@ -1,11 +1,19 @@
 body {
 	background-image: url('/images/bg-image.jpg');
-    background-size: cover; /* Adjust to your preference */
-    background-repeat: no-repeat; /* Adjust to your preference */
-	margin: 0;
-    padding: 0;
-  
+	background-size: cover; /* Cover the entire element */
+    background-repeat: no-repeat;
+    background-position: center; /* Center the background image */
+    margin: 0; /* Reset margin */
+    padding: 0; /* Reset padding */
+    height: 100vh; /* Set the height of the body to the full viewport height */
 			}
+
+			/* Media query for screens smaller than 768px (typical mobile devices) */
+@media only screen and (max-width: 768px) {
+    body {
+        background-size: contain; /* Adjust the background size for smaller screens */
+    }
+}
 
 			#wrap {
 				background: #222;
