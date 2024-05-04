@@ -976,19 +976,7 @@ $.setState = function( state ) {
 		} );
 		$.buttons.push( statsButton );
 
-		var creditsButton = new $.Button( {
-			x: $.cw / 2 + 1,
-			y: statsButton.ey + 26,
-			lockedWidth: 299,
-			lockedHeight: 49,
-			scale: 3,
-			title: 'DEVELOPER',
-			action: function() {
-				$.setState( 'credits' );
-			}
-		} ) ;
-		$.buttons.push( creditsButton );
-	}
+		
 
 	if( state == 'stats' ) {
 		$.mouse.down = 0;
@@ -1027,18 +1015,7 @@ $.setState = function( state ) {
 	if( state == 'credits' ) {
 		$.mouse.down = 0;
 
-		var js13kButton = new $.Button( {
-			x: $.cw / 2 + 1,
-			y: 476,
-			lockedWidth: 299,
-			lockedHeight: 49,
-			scale: 3,
-			title: 'GITHUB',
-			action: function() {				
-				location.href = 'https://github.com/Rajspeaks';
-				$.mouse.down = 0;
-			}
-		} );
+		
 		$.buttons.push( js13kButton );
 
 		var menuButton = new $.Button( {
@@ -1149,7 +1126,7 @@ $.setupStates = function() {
 			ctx: $.ctxmg,
 			x: $.cw / 2,
 			y: $.ch / 2 - 100,
-			text: 'CLASH OF SPACE',
+			text: 'VAYNER FLY',
 			hspacing: 2,
 			vspacing: 1,
 			halign: 'center',
@@ -1169,7 +1146,7 @@ $.setupStates = function() {
 			ctx: $.ctxmg,
 			x: $.cw / 2,
 			y: $.ch - 172,
-			text: 'Developer: Rajdeep Das',
+			text: 'Developer: ',
 			hspacing: 1,
 			vspacing: 1,
 			halign: 'center',
@@ -1276,36 +1253,7 @@ $.setupStates = function() {
 		$.ctxmg.fill();
 
 		$.ctxmg.beginPath();
-		var creditKeys = $.text( {
-			ctx: $.ctxmg,
-			x: $.cw / 2 - 10,
-			y: creditsTitle.ey + 49,
-			text: 'DEVELOPED BY\nAUDIO PROCESSING\n IDEAS TAKEN FROM \n HTML5 CANVAS REFERENCE\n GAME MATH REFERENCE',
-			hspacing: 1,
-			vspacing: 17,
-			halign: 'right',
-			valign: 'top',
-			scale: 2,
-			snap: 1,
-			render: 1
-		} );		
-		$.ctxmg.fillStyle = 'hsla(0, 0%, 100%, 0.5)';
-		$.ctxmg.fill();
-
-		$.ctxmg.beginPath();
-		var creditValues = $.text( {
-			ctx: $.ctxmg,
-			x: $.cw / 2 + 10,
-			y: creditsTitle.ey + 49,
-			text: ' RAJDEEP DAS\n AUSTINHALLOCK, CHANDLERPRALL\n ASTEROIDS, STAR SHOOTER \n CODEPEN, W3SCHOOL\n W3SCHOOL, CODEPEN\n JAVASCRIPT ANIMATION',
-			hspacing: 1,
-			vspacing: 17,
-			halign: 'left',
-			valign: 'top',
-			scale: 2,
-			snap: 1,
-			render: 1
-		} );		
+			
 		$.ctxmg.fillStyle = '#fff';
 		$.ctxmg.fill();
 
